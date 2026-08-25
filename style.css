@@ -1,35 +1,20 @@
-/* ==============================
-   STYLE DASAR HALAMAN
-   ============================== */
-
-/* Mengatur tampilan keseluruhan halaman */
 body {
     font-family: Arial, sans-serif;
     background-color: white;
     color: black;
 
-    /* Menghilangkan jarak bawaan browser */
     margin: 0;
 
-    /* Memberikan jarak di sekeliling halaman */
     padding: 30px;
 }
 
 
-/* ==============================
-   CONTAINER
-   ============================== */
-
-/* Membatasi lebar konten agar tetap rapi */
 .container {
     max-width: 900px;
     margin: 0;
 }
 
 
-/* ==============================
-   JUDUL
-   ============================== */
 
 header {
     margin-bottom: 30px;
@@ -46,20 +31,15 @@ header h2 {
 }
 
 
-/* ==============================
-   SETIAP BAGIAN
-   ============================== */
 
 section {
     margin-bottom: 30px;
 }
 
 
-/* Judul setiap bagian */
 section h2 {
     font-size: 22px;
 
-    /* Garis sederhana di bawah judul */
     border-bottom: 1px solid black;
 
     padding-bottom: 5px;
@@ -68,30 +48,20 @@ section h2 {
 }
 
 
-/* ==============================
-   FOTO PROFIL
-   ============================== */
 
 .foto {
     width: 150px;
     height: 150px;
 
-    /* Membuat gambar tidak gepeng */
     object-fit: cover;
 
-    /* Border sederhana */
     border: 1px solid black;
 
-    /* Foto tetap berada di sebelah kiri */
     display: block;
 
     margin-bottom: 20px;
 }
 
-
-/* ==============================
-   PARAGRAF
-   ============================== */
 
 p {
     font-size: 16px;
@@ -99,9 +69,6 @@ p {
 }
 
 
-/* ==============================
-   DAFTAR
-   ============================== */
 
 ul {
     padding-left: 25px;
@@ -112,9 +79,6 @@ li {
 }
 
 
-/* ==============================
-   FOOTER
-   ============================== */
 
 footer {
     margin-top: 40px;
