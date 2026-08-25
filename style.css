@@ -1,0 +1,126 @@
+/* ==============================
+   STYLE DASAR HALAMAN
+   ============================== */
+
+/* Mengatur tampilan keseluruhan halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+
+    /* Menghilangkan jarak bawaan browser */
+    margin: 0;
+
+    /* Memberikan jarak di sekeliling halaman */
+    padding: 30px;
+}
+
+
+/* ==============================
+   CONTAINER
+   ============================== */
+
+/* Membatasi lebar konten agar tetap rapi */
+.container {
+    max-width: 900px;
+    margin: 0;
+}
+
+
+/* ==============================
+   JUDUL
+   ============================== */
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+/* ==============================
+   SETIAP BAGIAN
+   ============================== */
+
+section {
+    margin-bottom: 30px;
+}
+
+
+/* Judul setiap bagian */
+section h2 {
+    font-size: 22px;
+
+    /* Garis sederhana di bawah judul */
+    border-bottom: 1px solid black;
+
+    padding-bottom: 5px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   FOTO PROFIL
+   ============================== */
+
+.foto {
+    width: 150px;
+    height: 150px;
+
+    /* Membuat gambar tidak gepeng */
+    object-fit: cover;
+
+    /* Border sederhana */
+    border: 1px solid black;
+
+    /* Foto tetap berada di sebelah kiri */
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==============================
+   PARAGRAF
+   ============================== */
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   DAFTAR
+   ============================== */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    margin-top: 40px;
+    padding-top: 10px;
+
+    border-top: 1px solid black;
+
+    font-size: 14px;
+}
