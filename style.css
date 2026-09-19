@@ -1,107 +1,1101 @@
+/* =====================================================
+   RESET DASAR
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HTML & BODY
+   ===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+    font-family: Arial, Helvetica, sans-serif;
 
-    margin: 0;
+    background-color: #f4f6f8;
 
-    padding: 30px;
-}
+    color: #202733;
 
-
-.container {
-    max-width: 900px;
-    margin: 0;
-}
-
-
-
-header {
-    margin-bottom: 30px;
-}
-
-header h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-header h2 {
-    font-size: 20px;
-    font-weight: normal;
-}
-
-
-
-section {
-    margin-bottom: 30px;
-}
-
-
-section h2 {
-    font-size: 22px;
-
-    border-bottom: 1px solid black;
-
-    padding-bottom: 5px;
-
-    margin-bottom: 15px;
-}
-
-
-
-.foto {
-    width: 150px;
-    height: 150px;
-
-    object-fit: cover;
-
-    border: 1px solid black;
-
-    display: block;
-
-    margin-bottom: 20px;
-}
-
-
-
-p {
-    font-size: 16px;
     line-height: 1.6;
 }
 
 
+/* =====================================================
+   CONTAINER UTAMA
+   CSS GRID
+   ===================================================== */
 
-ul {
-    padding-left: 25px;
+.container {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 240px 1fr;
+
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
 }
 
-li {
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+
+    grid-area: header;
+
+    background-color: #172033;
+
+    color: white;
+
+    min-height: 180px;
+
+    padding: 40px 55px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.header-left {
+    max-width: 700px;
+}
+
+.small-title {
+
+    display: inline-block;
+
     margin-bottom: 8px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    color: #9db5d5;
 }
 
+header h1 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    font-weight: normal;
+
+    letter-spacing: -1px;
+}
+
+header p {
+
+    margin-top: 5px;
+
+    color: #b9c2d0;
+
+    font-size: 15px;
+}
+
+.header-right {
+
+    width: 65px;
+
+    height: 65px;
+
+    border: 1px solid #65728a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    color: #dbe4f0;
+}
+
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+
+aside {
+
+    grid-area: sidebar;
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #dfe3e8;
+
+    padding: 30px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100%;
+}
+
+
+/* =====================================================
+   PROFIL MINI DI SIDEBAR
+   ===================================================== */
+
+.profile-mini {
+
+    text-align: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e5e8ec;
+}
+
+.mini-circle {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin: 0 auto 12px auto;
+
+    border-radius: 50%;
+
+    background-color: #172033;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+}
+
+.profile-mini h3 {
+
+    font-size: 13px;
+
+    color: #202733;
+
+    font-weight: bold;
+}
+
+.profile-mini p {
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: #7b8491;
+}
+
+
+/* =====================================================
+   JUDUL MENU
+   ===================================================== */
+
+.menu-title {
+
+    margin-top: 28px;
+
+    margin-bottom: 12px;
+
+    padding-left: 10px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #89919c;
+}
+
+
+/* =====================================================
+   NAVIGASI
+   ===================================================== */
+
+nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+nav a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px;
+
+    text-decoration: none;
+
+    color: #4c5562;
+
+    font-size: 13px;
+
+    border-left: 3px solid transparent;
+
+    transition: 0.2s;
+}
+
+nav a span {
+
+    width: 20px;
+
+    font-size: 10px;
+
+    color: #9aa2ad;
+}
+
+nav a:hover {
+
+    background-color: #f2f4f7;
+
+    color: #172033;
+
+    border-left-color: #172033;
+}
+
+
+/* =====================================================
+   BAGIAN BAWAH SIDEBAR
+   ===================================================== */
+
+.sidebar-bottom {
+
+    margin-top: auto;
+
+    padding: 15px;
+
+    background-color: #f4f6f8;
+
+    border: 1px solid #e3e6ea;
+}
+
+.sidebar-bottom span {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #8a929d;
+}
+
+.sidebar-bottom strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 13px;
+
+    color: #303945;
+}
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+main {
+
+    grid-area: main;
+
+    width: 100%;
+
+    max-width: 1150px;
+
+    padding: 45px 50px;
+}
+
+
+/* =====================================================
+   SECTION
+   ===================================================== */
+
+section {
+
+    background-color: white;
+
+    border: 1px solid #e0e4e8;
+
+    margin-bottom: 30px;
+
+    padding: 32px;
+
+    scroll-margin-top: 25px;
+}
+
+section:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   HEADER SECTION
+   ===================================================== */
+
+.section-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #e5e8ec;
+}
+
+.section-number {
+
+    padding-top: 3px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    color: #63748a;
+}
+
+.section-header h2 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    font-weight: normal;
+
+    color: #172033;
+}
+
+.section-header p {
+
+    margin-top: 2px;
+
+    font-size: 12px;
+
+    color: #89919c;
+}
+
+
+/* =====================================================
+   PROFILE
+   FLEXBOX
+   ===================================================== */
+
+.profile {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 35px;
+}
+
+
+/* =====================================================
+   FOTO
+   ===================================================== */
+
+.photo-wrapper {
+
+    flex-shrink: 0;
+
+    position: relative;
+}
+
+.profile-photo {
+
+    width: 190px;
+
+    height: 230px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border: 1px solid #d5dae0;
+
+    padding: 5px;
+
+    background-color: white;
+}
+
+
+/* =====================================================
+   DATA DIRI
+   ===================================================== */
+
+.profile-data {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.name-area {
+
+    padding-bottom: 18px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #e6e9ed;
+}
+
+.name-area span {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #929aa5;
+
+    margin-bottom: 4px;
+}
+
+.name-area h3 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    color: #172033;
+}
+
+
+/* =====================================================
+   DATA GRID
+   ===================================================== */
+
+.data-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px 25px;
+}
+
+.data-item span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: #929aa5;
+}
+
+.data-item strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: normal;
+
+    color: #374151;
+}
+
+
+/* =====================================================
+   TENTANG SAYA
+   ===================================================== */
+
+.about {
+
+    max-width: 850px;
+
+    color: #59616d;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+.about p {
+
+    margin-bottom: 15px;
+}
+
+.about p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   PENDIDIKAN
+   FLEXBOX
+   ===================================================== */
+
+.timeline {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.timeline-item {
+
+    display: flex;
+
+    gap: 25px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #e7eaed;
+}
+
+.timeline-item:first-child {
+
+    padding-top: 0;
+}
+
+.timeline-item:last-child {
+
+    border-bottom: none;
+
+    padding-bottom: 0;
+}
+
+.timeline-year {
+
+    width: 90px;
+
+    flex-shrink: 0;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #65758b;
+}
+
+.timeline-content h3 {
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    font-weight: normal;
+
+    color: #202733;
+}
+
+.timeline-content p {
+
+    margin-top: 2px;
+
+    font-size: 13px;
+
+    color: #59616d;
+}
+
+.timeline-content small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: #929aa5;
+}
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
 
 table {
-    border-collapse: collapse;
+
     width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
 }
 
-th,
-td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: left;
+thead {
+
+    background-color: #172033;
+
+    color: white;
 }
 
 th {
-    background-color: #f2f2f2;
+
+    padding: 13px 15px;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+}
+
+td {
+
+    padding: 14px 15px;
+
+    border-bottom: 1px solid #e5e8ec;
+
+    color: #4b5563;
+}
+
+tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+tbody tr:hover {
+
+    background-color: #f8f9fa;
 }
 
 
+/* =====================================================
+   KEAHLIAN
+   FLEXBOX
+   ===================================================== */
+
+.skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.skill {
+
+    padding: 9px 15px;
+
+    border: 1px solid #d5dae0;
+
+    background-color: #fafbfc;
+
+    color: #4b5563;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   HOBI
+   FLEXBOX
+   ===================================================== */
+
+.hobbies {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.hobby {
+
+    padding: 9px 18px;
+
+    border: 1px solid #d5dae0;
+
+    color: #4b5563;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+form {
+
+    max-width: 700px;
+}
+
+.form-row {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.form-row .form-group {
+
+    flex: 1;
+}
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    color: #424a55;
+}
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #d3d8de;
+
+    background-color: white;
+
+    color: #333b47;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+
+    border-color: #66768c;
+}
+
+button {
+
+    padding: 11px 22px;
+
+    border: none;
+
+    background-color: #172033;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+button:hover {
+
+    background-color: #2b374b;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
 footer {
-    margin-top: 40px;
-    padding-top: 10px;
 
-    border-top: 1px solid black;
+    grid-area: footer;
 
-    font-size: 14px;
+    background-color: #172033;
+
+    color: white;
+
+    min-height: 75px;
+
+    padding: 20px 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+footer strong {
+
+    font-size: 12px;
+}
+
+footer span {
+
+    color: #8f9aaa;
+
+    font-size: 12px;
+}
+
+footer p {
+
+    color: #8f9aaa;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+   ===================================================== */
+
+@media (max-width: 850px) {
+
+    .container {
+
+        grid-template-columns: 190px 1fr;
+    }
+
+    main {
+
+        padding: 30px;
+    }
+
+    header {
+
+        padding: 35px;
+    }
+
+    .profile {
+
+        gap: 25px;
+    }
+
+    .profile-photo {
+
+        width: 160px;
+
+        height: 200px;
+    }
+
+    .data-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE HP
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .container {
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto auto 1fr auto;
+
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+
+    header {
+
+        min-height: 150px;
+
+        padding: 30px 20px;
+    }
+
+
+    header h1 {
+
+        font-size: 32px;
+    }
+
+
+    .header-right {
+
+        display: none;
+    }
+
+
+    aside {
+
+        border-right: none;
+
+        border-bottom: 1px solid #dfe3e8;
+
+        padding: 20px;
+    }
+
+
+    .profile-mini {
+
+        display: none;
+    }
+
+
+    .menu-title {
+
+        margin-top: 0;
+    }
+
+
+    nav {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 3px;
+    }
+
+
+    nav a {
+
+        font-size: 12px;
+    }
+
+
+    .sidebar-bottom {
+
+        display: none;
+    }
+
+
+    main {
+
+        padding: 20px 12px;
+    }
+
+
+    section {
+
+        padding: 22px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .profile {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .profile-photo {
+
+        width: 170px;
+
+        height: 210px;
+    }
+
+
+    .data-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-row {
+
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+
+    footer {
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* =====================================================
+   HP SANGAT KECIL
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    nav {
+
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+
+        font-size: 28px;
+    }
+
+    .section-header h2 {
+
+        font-size: 21px;
+    }
+
 }
